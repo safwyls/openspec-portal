@@ -1,0 +1,11 @@
+{
+  "milestones": [{"id":"M2","label":"Beta blockers","outcome":"A newcomer can safely configure and program a supported saber.","exitCriteria":["Owner demonstrates the flow on supported hardware.","Data-loss blockers have verification evidence."]}],
+  "changes": {
+    "example-change": {
+      "milestone":"M2",
+      "dependsOn":[],
+      "decisions":["2026-09-26: Example only; replace with actual decisions."],
+      "evidence":[{"label":"Example source reference, not a test result","url":"openspec:changes/example-change/tasks.md","kind":"agent-reported","revision":"replace-with-commit-sha","recordedAt":"2026-09-26T12:00:00Z","capability":"example-capability","requirement":"Exact requirement title without the Requirement: prefix","task":"1.1"}]
+    }
+  }
+}

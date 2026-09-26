@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>OpenSpec Portal</title>
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/light-theme.css">
+  <script src="/graph-layout.js" defer></script>
+  <script src="/explore.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 21 12 12 21 3 12Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span>OpenSpec <strong>Portal</strong></span></div>
+      <div class="workspace"><span class="workspace-icon">R</span><div><span class="eyebrow">LOCAL REPOSITORY</span><strong id="workspace-name">Loading…</strong></div></div>
+      <nav aria-label="Main navigation" id="nav">
+        <button data-view="overview" class="nav-item active"><span>▦</span> Overview</button>
+        <button data-view="map" class="nav-item"><span>◎</span> Project map</button>
+        <button data-view="graph" class="nav-item"><span>⌘</span> Node graph</button>
+        <button data-view="timeline" class="nav-item"><span>▤</span> Timeline</button>
+        <button data-view="changes" class="nav-item"><span>◈</span> Active changes <em id="nav-changes">0</em></button>
+        <button data-view="specs" class="nav-item"><span>▤</span> Specifications <em id="nav-specs">0</em></button>
+        <button data-view="archive" class="nav-item"><span>◷</span> Archive <em id="nav-archive">0</em></button>
+        <button data-view="files" class="nav-item"><span>≡</span> All files</button>
+        <button data-view="diagnostics" class="nav-item"><span>◇</span> Repository health</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="status-dot"></div><span>Local repository</span></div>
+    </aside>
+    <div class="shell">
+      <header class="topbar">
+        <div class="topbar-heading"><span id="topbar-eyebrow" class="eyebrow accent">PROJECT</span><h1 id="topbar-title">Overview</h1><p id="topbar-description"></p></div>
+        <div class="top-actions"><div id="topbar-extra"></div><span id="last-scan" class="last-scan"></span><button id="refresh" class="icon-button" type="button" title="Refresh repository" aria-label="Refresh repository"><svg class="refresh-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5"/><path d="M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg></button><button id="theme-toggle" class="theme-toggle" type="button" title="Switch to light theme" aria-label="Switch to light theme" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Light</span></button></div>
+      </header>
+      <main id="main" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
