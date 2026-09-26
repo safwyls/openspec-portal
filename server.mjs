@@ -344,7 +344,7 @@ async function buildScan() {
       const currentSignature = `${task.done}|${task.text}`;
       // Uncommitted state is shown separately; mtime is not historical activity.
       // No Git evidence means dates are unknown, not checkout timestamps.
-      
+
       if (!task.done) completedAt = '';
       const entries = attributed.get(change.id + '/' + task.id) || [];
       task.timeline = {

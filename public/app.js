@@ -54,7 +54,7 @@ async function load(initial = false, source = 'manual') {
     const cursor = focusId === 'search' ? active.selectionStart : null;
     const effortInputs = Object.fromEntries(['effort-task','effort-date','effort-minutes','effort-note'].map(id => [id, document.getElementById(id)?.value]));
     state.data = nextData; state.stale = false;
-    
+
     $('#workspace-name').textContent = state.data.name;
     document.title = `${state.data.name} · OpenSpec Portal`;
     $('#nav-changes').textContent = state.data.changes.length;
